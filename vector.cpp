@@ -30,6 +30,21 @@ void part1() {
 
 void part2() {
     //TODO: Implement part 2
+    // create a std::vector<bool> with 10,000 elements
+    std::vector<bool> boolVec(10000, true);
+
+    // create a std::vector<char> with 10,000 elements
+    std::vector<char> charVec(10000, 'a');
+
+    // compute memory usage in bytes by dividing capacity by 8 (rounds up)
+    size_t boolMemoryUsage = (boolVec.capacity() + 7) / 8;
+
+    // each char is 1 byte
+    size_t charMemoryUsage = charVec.capacity() * sizeof(char);
+
+    // output memory usage results
+    std::cout << "Memory usage of std::vector<bool>: " << boolMemoryUsage << " bytes" << std::endl;
+    std::cout << "Memory usage of std::vector<char>: " << charMemoryUsage << " bytes" << std::endl;
 }
 
 int main() {
