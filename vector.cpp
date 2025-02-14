@@ -14,6 +14,18 @@ void part1() {
 
     // record and output size and capacity after adding elements
     std::cout << "After adding elements: Size = " << myVector.size() << ", Capacity = " << myVector.capacity() << std::endl;
+
+    // remove half the elements by resizing the vector
+    myVector.resize(myVector.size() / 2);
+
+    // record and output size and capacity after resizing
+    std::cout << "After resizing: Size = " << myVector.size() << ", Capacity = " << myVector.capacity() << std::endl;
+    
+    // optimize memory usage by reducing capacity to match size
+    myVector.shrink_to_fit();
+
+    // record and output size and capacity after shrink_to_fit()
+    std::cout << "After shrink_to_fit(): Size = " << myVector.size() << ", Capacity = " << myVector.capacity() << std::endl;
 }
 
 void part2() {
